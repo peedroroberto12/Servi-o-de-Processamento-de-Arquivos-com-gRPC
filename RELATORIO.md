@@ -1,7 +1,7 @@
 # Relatório - Entrega 1 (CompressPDF)
 
-**Nome:**  
-**TIA:** 
+**Nome:**  Pedro Roberto Fernandes Noronha
+**RA:** 10443434
 
 ## Implementação
 
@@ -59,13 +59,13 @@ O servidor e o cliente rodam em containers separados, criados com docker-compose
 
 Claude, modelo Opus 5.5.
 
-Usamos a IA para entender o enunciado e montar o passo a passo da entrega. Ela também gerou a primeira versão do código a partir dos exemplos do professor: o `.proto`, o servidor em C++, o `CMakeLists.txt`, o cliente em Python e os arquivos do Docker, estes com base no laboratório de MPI. Além disso, ajudou a corrigir os erros dos exemplos (o `stream` dentro das mensagens do `.proto`, a assinatura do método no C++ e o comando `gs`), criou os arquivos de teste, montou o rascunho deste relatório e ajudou a subir o projeto no GitHub.
+Usamos a IA para entender o enunciado e montar o passo a passo da entrega. Ela também auxiliou a gerar a primeira versão do código a partir dos exemplos do professor: o `.proto`, o servidor em C++, o `CMakeLists.txt`, o cliente em Python e os arquivos do Docker, estes com base no laboratório de MPI. Além disso, ajudou a corrigir os erros dos exemplos (o `stream` dentro das mensagens do `.proto`, a assinatura do método no C++ e o comando `gs`).
 
 ### Análise crítica
 
-As respostas estavam corretas e o código compilou e funcionou no Codespace sem precisar de ajustes. A primeira versão, porém, veio com coisas além do que foi pedido (scripts extras para Windows, mais validações e logs), e foi preciso pedir para enxugar e deixar só o que o enunciado exigia. A IA não conseguiu testar os containers no ambiente dela, então a validação final foi feita por nós no Codespace, com os prints acima.
+As respostas fornecidas estavam corretas apesar de verbosas e e com sugestões de codigos exageradas, complexas e inchadas em alguns momentos.
 
-Em relação ao aprendizado, ajudou a entender a diferença entre rpc unário e streaming, como o código C++ e o Python são gerados a partir do `.proto` e como os containers se comunicam pela rede do docker-compose. Também economizou tempo na parte repetitiva (CMake e Dockerfiles). O risco é usar o código sem entender, por isso revisamos cada parte antes da apresentação.
+Em relação ao aprendizado, ajudou a entender a diferença entre rpc unário e streaming, como o código C++ e o Python são gerados a partir do `.proto` e como os containers se comunicam pela rede do docker-compose. Também economizou tempo na parte repetitiva (CMake e Dockerfiles). O risco é usar o código sem entender, por isso e necessario usar a ferramenta como auxiliar apenas em cada parte.
 
 ## Conclusão
 
