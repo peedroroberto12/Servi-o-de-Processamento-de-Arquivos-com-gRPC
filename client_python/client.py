@@ -1,6 +1,6 @@
 # cliente grpc em python
 # pede um pdf pro usuario, manda pro servidor e salva o pdf comprimido que volta
-# baseado no codigo de exemplo do professor
+
 
 import os
 
@@ -8,7 +8,7 @@ import grpc
 import file_processor_pb2
 import file_processor_pb2_grpc
 
-# no docker o servidor se chama "server", fora dele e localhost
+# no docker o servidor se chama "server, fora dele e localhost
 SERVER_ADDRESS = os.getenv("SERVER_ADDRESS", "localhost:50051")
 
 

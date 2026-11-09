@@ -1,6 +1,6 @@
 // servidor grpc em c++
 // recebe um pdf do cliente, comprime com o ghostscript e devolve o pdf comprimido
-// baseado no codigo de exemplo do professor
+// baseado no codigo de exemplo
 
 #include <cstdio>
 #include <fstream>
