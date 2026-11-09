@@ -1,0 +1,48 @@
+// baseado no exemplo do professor
+// no proto3 o "stream" nao pode ficar dentro da message, entao foi pro rpc
+
+syntax = "proto3";
+
+package file_processor;
+
+// um pedaco do arquivo
+message FileChunk {
+    bytes content = 1;
+}
+
+// o nome e os parametros vao so na primeira mensagem
+message FileRequest {
+    string file_name = 1;
+    FileChunk file_content = 2;
+    oneof parameters {
+        CompressPDFRequest compress_pdf_params = 3;
+        ConvertToTXTRequest convert_to_txt_params = 4;
+        ConvertImageFormatRequest convert_image_format_params = 5;
+        ResizeImageRequest resize_image_params = 6;
+    }
+}
+
+message CompressPDFRequest {}
+message ConvertToTXTRequest {}
+message ConvertImageFormatRequest {
+    string output_format = 1;
+}
+message ResizeImageRequest {
+    int32 width = 1;
+    int32 height = 2;
+}
+
+message FileResponse {
+    string file_name = 1;
+    FileChunk file_content = 2;
+    string status_message = 3;
+    bool success = 4;
+}
+
+// entrega 1: so o CompressPDF esta implementado
+service FileProcessorService {
+    rpc CompressPDF(stream FileRequest) returns (stream FileResponse);
+    rpc ConvertToTXT(stream FileRequest) returns (stream FileResponse);
+    rpc ConvertImageFormat(stream FileRequest) returns (stream FileResponse);
+    rpc ResizeImage(stream FileRequest) returns (stream FileResponse);
+}

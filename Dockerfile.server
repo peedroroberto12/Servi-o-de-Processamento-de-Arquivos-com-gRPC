@@ -1,0 +1,11 @@
+FROM ubuntu:24.04
+RUN apt update && \
+    apt install -y g++ cmake pkg-config libgrpc++-dev libprotobuf-dev \
+                   protobuf-compiler protobuf-compiler-grpc ghostscript
+WORKDIR /app
+COPY proto/ proto/
+COPY server_cpp/ server_cpp/
+RUN cmake -S server_cpp -B server_cpp/build && cmake --build server_cpp/build
+RUN mkdir -p logs
+EXPOSE 50051
+CMD ["./server_cpp/build/server"]

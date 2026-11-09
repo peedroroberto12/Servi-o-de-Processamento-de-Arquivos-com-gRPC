@@ -1,0 +1,32 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: server
+    hostname: server
+    ports:
+      - "50051:50051"
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - grpc_net
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: client
+    hostname: client
+    environment:
+      - SERVER_ADDRESS=server:50051
+    volumes:
+      - ./arquivos:/app/arquivos
+      - ./saida:/app/saida
+    depends_on:
+      - server
+    networks:
+      - grpc_net
+
+networks:
+  grpc_net:
