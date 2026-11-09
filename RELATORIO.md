@@ -26,9 +26,28 @@ O servidor e o cliente rodam em containers separados, criados com docker-compose
 
 ## Testes
 
-- PDF válido (`arquivos/teste.pdf`): comprimido e salvo em `saida/`.
+- PDF válido (`arquivos/teste.pdf`): comprimido e salvo em `saida/`, de 2.962.314 para 2.239.007 bytes (cerca de 24% menor).
 - Arquivo que não é PDF (`arquivos/nao_e_pdf.pdf`): o gs falha, o cliente recebe erro e o log registra.
 - Arquivo inexistente: o cliente avisa sem chamar o servidor.
 
 ## Prints
 
+**Containers rodando** (`docker ps`): servidor e cliente ativos, com a porta 50051 do servidor publicada.
+
+![docker ps](prints/1_docker_ps.png)
+
+**Menu do cliente:**
+
+![menu do cliente](prints/2_menu_cliente.png)
+
+**Compressão com sucesso:** o `teste.pdf` foi comprimido e salvo em `saida/`.
+
+![compressao com sucesso](prints/3_compressao_sucesso.png)
+
+**Testes de erro:** arquivo que não é PDF (o gs falha e o servidor devolve erro) e arquivo inexistente (o cliente avisa sem chamar o servidor).
+
+![testes de erro](prints/4_testes_erro.png)
+
+**Log do servidor e tamanho dos arquivos:** o `server.log` registra o sucesso e a falha, e o `ls` mostra o PDF comprimido menor que o original.
+
+![log e arquivos](prints/5_log_e_arquivos.png)
