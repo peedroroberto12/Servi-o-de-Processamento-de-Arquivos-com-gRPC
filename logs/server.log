@@ -1,0 +1,2 @@
+[2026-11-09 01:47:14] SUCCESS - Service: CompressPDF, File: teste.pdf, Message: compressao pdf bem-sucedida.
+[2026-11-09 01:48:28] ERROR - Service: CompressPDF, File: nao_e_pdf.pdf, Message: falha na compressao pdf. codigo de retorno: 1. saida: Error: /undefined in isso
