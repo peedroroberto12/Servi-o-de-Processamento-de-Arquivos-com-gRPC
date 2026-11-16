@@ -1,2 +1,8 @@
 [2026-11-09 01:47:14] SUCCESS - Service: CompressPDF, File: teste.pdf, Message: compressao pdf bem-sucedida.
 [2026-11-09 01:48:28] ERROR - Service: CompressPDF, File: nao_e_pdf.pdf, Message: falha na compressao pdf. codigo de retorno: 1. saida: Error: /undefined in isso
+[2026-11-16 01:22:59] SUCCESS - Service: ConvertToTXT, File: texto.pdf, Message: processado com sucesso, saida: texto.txt
+[2026-11-16 01:24:22] SUCCESS - Service: ConvertImageFormat, File: teste.jpg, Message: processado com sucesso, saida: teste.png
+[2026-11-16 01:25:03] SUCCESS - Service: ResizeImage, File: teste.jpg, Message: processado com sucesso, saida: resized_teste.jpg
+[2026-11-16 01:26:29] ERROR - Service: ConvertImageFormat, File: teste.jpg, Message: formato de saida invalido: 'xyz'
+[2026-11-16 01:26:54] ERROR - Service: ResizeImage, File: nao_e_imagem.jpg, Message: falha ao processar. codigo de retorno: 1. saida: convert-im6.q16: insufficient image data in file `/tmp/input_nao_e_imagem.jpg' @ error/jpeg.c/ReadJPEGImage_/1184.
+[2026-11-16 01:27:22] ERROR - Service: ResizeImage, File: teste.jpg, Message: dimensoes invalidas: 0x600

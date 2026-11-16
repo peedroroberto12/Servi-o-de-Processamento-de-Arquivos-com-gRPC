@@ -1,0 +1,7 @@
+Arquivo de teste - ConvertToTXT
+Este PDF foi criado para testar o servico ConvertToTXT do projeto de gRPC.
+O servidor recebe este arquivo por streaming, executa o comando pdftotext e devolve o conteudo
+em formato de texto para o cliente Python.
+Universidade Presbiteriana Mackenzie - Faculdade de Computacao e Informatica.
+
+

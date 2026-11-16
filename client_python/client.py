@@ -14,8 +14,8 @@ SERVER_ADDRESS = os.getenv("SERVER_ADDRESS", "localhost:50051")
 
 
 def processar_arquivo(rpc, input_file_path, output_file_path, **parametros):
-    # rpc = qual servico chamar (stub.CompressPDF, stub.ResizeImage...)
-    # parametros = os parametros do servico, ex: resize_image_params=...
+    # rpc = qual servico chamar 
+    # parametros = os parametros do servico
     if not os.path.isfile(input_file_path):
         print(f"arquivo nao encontrado: {input_file_path}")
         return
